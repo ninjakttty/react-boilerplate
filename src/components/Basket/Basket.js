@@ -5,8 +5,6 @@ import { connect } from 'react-redux'
 
 const Basket = props => {
   const { basket } = props
-  console.log('basket', basket)
-
   return <List>{basket.map((item, i) => <List.Item key={i}>{item}</List.Item>)}</List>
 }
 

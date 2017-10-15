@@ -13,9 +13,10 @@ export function login(payload) {
   }
 }
 
-export function logout(payload) {
-  return {
-    type: LOGOUT,
-    payload,
+export function logout() {
+  return function(dispatch) {
+    setTimeout(() => {
+      dispatch({ type: LOGOUT })
+    }, 1500)
   }
 }

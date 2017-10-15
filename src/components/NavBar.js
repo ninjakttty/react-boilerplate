@@ -8,20 +8,19 @@ class NavBar extends Component {
 
   handleItemClick = (e, { name }) => {
     const { path, push } = this.props
-    console.log('path', path)
     this.setState({ activeItem: name })
 
     push(name === 'home' ? '/' : `/${name}`)
   }
 
   render() {
-    const { activeItem } = this.state
+    const { path } = this.props
 
     return (
       <Menu>
-        <Menu.Item name="home" active={activeItem === 'home'} onClick={this.handleItemClick} />
-        <Menu.Item name="login" active={activeItem === 'login'} onClick={this.handleItemClick} />
-        <Menu.Item name="logout" active={activeItem === 'logout'} onClick={this.handleItemClick} />
+        <Menu.Item name="home" active={path === '/'} onClick={this.handleItemClick} />
+        <Menu.Item name="login" active={path === '/login'} onClick={this.handleItemClick} />
+        <Menu.Item name="logout" active={path === '/logout'} onClick={this.handleItemClick} />
       </Menu>
     )
   }

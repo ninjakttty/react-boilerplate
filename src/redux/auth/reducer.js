@@ -15,7 +15,7 @@ export default function authReducer(state = new initialState(), action) {
       return state.set('email', email).set('loggedIn', loggedIn)
     }
     case actions.LOGOUT: {
-      return state
+      return new initialState()
     }
   }
 
