@@ -2,6 +2,7 @@
   "name": "@ninjakttty/react-boilerplate",
   "version": "0.0.1",
   "description": "react/redux/boilerplate",
+  "engines": { "node": "8.x.x" },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^4.9.0",
