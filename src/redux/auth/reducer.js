@@ -9,12 +9,17 @@ const initialState = Record({
 
 export default function authReducer(state = new initialState(), action) {
   switch (action.type) {
-    case actions.LOGIN: {
+    case actions.LOGIN_FULFILLED: {
+      console.log(`accepted login`, action.payload)
       const { loggedIn, email } = action.payload
-      if (!loggedIn) return state.set('loggedIn', false)
       return state.set('email', email).set('loggedIn', loggedIn)
     }
-    case actions.LOGOUT: {
+    case actions.LOGIN_REJECTED: {
+      console.log(`rejected login`, action.payload)
+      return new initialState()
+    }
+
+    case actions.LOGOUT_FULFILLED: {
       return new initialState()
     }
   }

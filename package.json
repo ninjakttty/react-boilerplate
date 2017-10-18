@@ -2,7 +2,9 @@
   "name": "@ninjakttty/react-boilerplate",
   "version": "0.0.1",
   "description": "react/redux/boilerplate",
-  "engines": { "node": "8.x.x" },
+  "engines": {
+    "node": "8.x.x"
+  },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^4.9.0",
@@ -32,6 +34,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "next",
     "redux": "^3.7.2",
+    "redux-promise-middleware": "^4.4.1",
     "redux-thunk": "^2.2.0",
     "sanitize.css": "^5.0.0",
     "semantic-ui-css": "^2.2.12",
