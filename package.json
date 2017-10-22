@@ -5,6 +5,7 @@
   "engines": {
     "node": "8.x.x"
   },
+  "proxy": "http://localhost:3000/",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^4.9.0",
@@ -27,6 +28,8 @@
   "dependencies": {
     "history": "^4.7.2",
     "immutable": "^3.8.2",
+    "is-json": "^2.0.1",
+    "random-int": "^1.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",

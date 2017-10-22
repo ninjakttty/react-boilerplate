@@ -5,8 +5,8 @@ import * as AuthActions from '../../redux/auth/actions'
 
 class LoginForm extends Component {
   state = {
-    email: '',
-    password: '',
+    email: 'yuri@ninjakitty.net',
+    password: 'thing',
     loading: false,
   }
 
@@ -25,8 +25,8 @@ class LoginForm extends Component {
   render() {
     const form = (
       <Form onSubmit={this.handleSubmit}>
-        <Form.Input label="Enter Email" type="text" name="email" onChange={this.handleChange} />
-        <Form.Input label="Enter Password" type="password" name="password" onChange={this.handleChange} />
+        <Form.Input defaultValue="yuri@ninjakitty.net" label="Enter Email" type="text" name="email" onChange={this.handleChange} />
+        <Form.Input defaultValue="thing" label="Enter Password" type="password" name="password" onChange={this.handleChange} />
         <Button type="submit" loading={this.state.loading}>
           Submit
         </Button>

@@ -4,20 +4,45 @@ export const LOGIN_REJECTED = 'LOGIN_REJECTED'
 export const LOGOUT = 'LOGOUT'
 export const LOGOUT_FULFILLED = 'LOGOUT_FULFILLED'
 export const LOGOUT_REJECTED = 'LOGOUT_REJECTED'
+export const CREATE_ACCOUNT = 'CREATE_ACCOUNT'
+export const CREATE_ACCOUNT_FULFILLED = 'CREATE_ACCOUNT_FULFILLED'
+export const CREATE_ACCOUNT_REJECTED = 'CREATE_ACCOUNT_REJECTED'
 
 export function login(data) {
-  const promise = fetch('/yuri-is-great') // make a real network request but don't care about data
-    .then(() => {
-      if (data.email === 'yuri@ninjakitty.net') {
-        return { loggedIn: true, token: 'validation token', ...data }
-      } else {
-        throw new Error()
-      }
-    })
+  const { email, password } = data
+  const promise = fetch('/api/accounts/login', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email, password }),
+  })
+    .then(data => data.json())
+    .then(({ token }) => token)
+    .then(token => ({ token, ...data }))
     .catch(() => {
-      return Promise.reject({ loggedIn: false, token: 'nope', ...data })
+      return new Promise((resolve, reject) => reject())
     })
+  return {
+    type: LOGIN,
+    payload: promise,
+  }
+}
 
+export function createAccount(data) {
+  delete data.loading
+
+  const promise = fetch('/api/accounts/create', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  }).then(data => {
+    // console.log('return data', data)
+  })
   return {
     type: LOGIN,
     payload: promise,
