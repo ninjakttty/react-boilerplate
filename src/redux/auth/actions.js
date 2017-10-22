@@ -40,8 +40,6 @@ export function createAccount(data) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
-  }).then(data => {
-    // console.log('return data', data)
   })
   return {
     type: LOGIN,

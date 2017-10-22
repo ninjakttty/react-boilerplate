@@ -11,7 +11,6 @@ export default function authReducer(state = new initialState(), action) {
   switch (action.type) {
     case actions.LOGIN_FULFILLED: {
       const { token, email } = action.payload
-      // console.log(`accepted login`, token, email)
       return state
         .set('email', email)
         .set('token', token)
