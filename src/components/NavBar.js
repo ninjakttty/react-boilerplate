@@ -18,17 +18,11 @@ class NavBar extends Component {
     return (
       <Menu>
         <Menu.Item name="home" active={path === '/'} onClick={this.handleItemClick} />
-<<<<<<< HEAD
-        <Menu.Item name="login" active={path === '/login'} onClick={this.handleItemClick} />
-        <Menu.Item name="create" active={path === '/create'} onClick={this.handleItemClick} />
-        <Menu.Item name="logout" active={path === '/logout'} onClick={this.handleItemClick} />
-=======
         {!loggedIn ? (
           <Menu.Item name="login" active={path === '/login'} onClick={this.handleItemClick} />
         ) : (
           <Menu.Item name="logout" active={path === '/logout'} onClick={this.handleItemClick} />
         )}
->>>>>>> release/0.0.1
       </Menu>
     )
   }
