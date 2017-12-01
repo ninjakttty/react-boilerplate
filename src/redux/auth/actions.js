@@ -48,6 +48,7 @@ export function createAccount(data) {
 }
 
 export function logout() {
+  // fake making ajax request
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve()

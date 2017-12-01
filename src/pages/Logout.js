@@ -4,10 +4,12 @@ import { connect } from 'react-redux'
 import { Button } from 'semantic-ui-react'
 import * as AuthActions from '../redux/auth/actions'
 
-const LogoutPage = props => (
+const LogoutPage = ({ logout }) => (
   <div>
     <NavBar />
-    <Button onClick={props.logout}>logout</Button>
+    <Button negative onClick={logout}>
+      Are you sure you want to log out
+    </Button>
   </div>
 )
 
