@@ -13,10 +13,17 @@ const ProductList = props => {
   }
   return (
     <Button.Group vertical>
-      <Button onClick={kushClick}>Kush</Button>
-      <Button onClick={staviaClick}>Sativa</Button>
+      <Button onClick={kushClick}>
+        Kush
+      </Button>
+      <Button onClick={staviaClick}>
+        Sativa
+      </Button>
     </Button.Group>
   )
 }
 
-export default connect(state => ({ options: state.basket }), BasketActions)(ProductList)
+export default connect(
+  state => ({ options: state.basket }),
+  BasketActions
+)(ProductList)

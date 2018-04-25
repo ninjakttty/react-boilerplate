@@ -3,7 +3,10 @@ import { List } from 'immutable'
 
 const initialState = List()
 
-export default function basketReducer(state = initialState, action) {
+export default function basketReducer(
+  state = initialState,
+  action
+) {
   switch (action.type) {
     case actions.ADD_TO_BASKET: {
       const id = action.payload

@@ -1,5 +1,7 @@
-export const ADD_TO_BASKET = 'ADD_TO_BASKET'
-export const SUB_FROM_BASKET = 'SUB_FROM_BASKET'
+export const ADD_TO_BASKET =
+  'ADD_TO_BASKET'
+export const SUB_FROM_BASKET =
+  'SUB_FROM_BASKET'
 
 export function addToBasket(payload) {
   return {
