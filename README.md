@@ -1,5 +1,5 @@
 # Yuri's React/Redux/Immutable/Webpack Boilerplate
-
+[![Build Status](https://travis-ci.org/ninjakttty/react-boilerplate.svg?branch=master)](https://travis-ci.org/ninjakttty/react-boilerplate)
 [![Greenkeeper badge](https://badges.greenkeeper.io/ninjakttty/react-boilerplate.svg)](https://greenkeeper.io/)
 
 ## Installation
