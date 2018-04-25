@@ -20,11 +20,12 @@
     "dev": "react-scripts start",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
+    "test:all": "react-scripts test --env=jsdom",
     "pretty": "prettier --write 'src/**/*.js'"
   },
   "lint-staged": {
-    "*.js": ["npm run pretty", "git add"]
+    "src/**/*.{js,jsx,json,css}": ["prettier", "git add"]
   },
   "husky": {
     "hooks": {
