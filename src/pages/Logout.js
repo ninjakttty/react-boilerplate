@@ -4,30 +4,13 @@ import { connect } from 'react-redux'
 import { Button } from 'semantic-ui-react'
 import * as AuthActions from '../redux/auth/actions'
 
-const LogoutPage = ({
-  logout,
-}) => (
+const LogoutPage = ({ logout }) => (
   <div>
     <NavBar />
-    <Button
-      negative
-      onClick={
-        logout
-      }>
-      Are
-      you
-      sure
-      you
-      want
-      to log
-      out
+    <Button negative onClick={logout}>
+      Are you sure you want to log out
     </Button>
   </div>
 )
 
-export default connect(
-  null,
-  AuthActions
-)(
-  LogoutPage
-)
+export default connect(null, AuthActions)(LogoutPage)
