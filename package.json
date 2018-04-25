@@ -6,6 +6,12 @@
 		"node": "8.x.x"
 	},
 	"proxy": "http://localhost:3000/",
+	"husky": {
+		"hooks": {
+			"pre-commit": "echo npm test",
+			"pre-push": "echo npm test"
+		}
+	},
 	"scripts": {
 		"start": "react-scripts start",
 		"dev": "react-scripts start",
@@ -13,38 +19,28 @@
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "echo npm test",
-			"pre-push": "echo npm test"
-		}
-	},
 	"dependencies": {
 		"axios": "~0.18.0",
 		"history": "^4.7.2",
 		"immutable": "^3.8.2",
-		"is-json": "^2.0.1",
-		"random-int": "^1.0.0",
-		"react": "^16.0.0",
-		"react-dom": "^16.0.0",
-		"react-redux": "^5.0.6",
-		"react-router": "^4.2.0",
 		"react-router-dom": "^4.2.2",
 		"react-router-redux": "next",
 		"redux": "^4.0.0",
 		"redux-promise-middleware": "^5.1.1",
 		"redux-thunk": "^2.2.0",
 		"sanitize.css": "^5.0.0",
+		"is-json": "^2.0.1",
+		"random-int": "^1.0.0",
+		"react": "^16.0.0",
+		"react-dom": "^16.0.0",
+		"react-redux": "^5.0.6",
+		"react-router": "^4.2.0",
 		"semantic-ui-css": "^2.2.12",
 		"semantic-ui-react": "^0.79.1"
 	},
 	"devDependencies": {
 		"babel-eslint": "^8.2.3",
 		"eslint": "^4.9.0",
-		"eslint-config-airbnb": "^16.0.0",
-		"eslint-config-prettier": "^2.9.0",
-		"eslint-config-react-app": "^2.0.1",
-		"eslint-config-standard": "^11.0.0",
 		"eslint-plugin-flowtype": "^2.39.1",
 		"eslint-plugin-import": "^2.7.0",
 		"eslint-plugin-jsx-a11y": "^6.0.3",
@@ -54,6 +50,10 @@
 		"eslint-plugin-standard": "^3.0.1",
 		"husky": "^1.0.0-rc.2",
 		"prettier": "^1.12.1",
+		"eslint-config-airbnb": "^16.0.0",
+		"eslint-config-prettier": "^2.9.0",
+		"eslint-config-react-app": "^2.0.1",
+		"eslint-config-standard": "^11.0.0",
 		"prettier-eslint": "^8.8.1",
 		"prettier-eslint-cli": "^4.7.1",
 		"react-scripts": "^1.0.14"
