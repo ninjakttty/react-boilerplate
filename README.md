@@ -1,5 +1,7 @@
 # Yuri's React/Redux/Immutable/Webpack Boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ninjakttty/react-boilerplate.svg)](https://greenkeeper.io/)
+
 ## Installation
 
 ```
