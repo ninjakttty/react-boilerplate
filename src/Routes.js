@@ -8,10 +8,31 @@ import Create from './pages/Create'
 export default function Routes() {
   return (
     <div>
-      <Route exact path="/" component={Home} />
-      <Route path="/login" component={Login} />
-      <Route path="/logout" component={Logout} />
-      <Route path="/create" component={Create} />
+      <Route
+        exact
+        path="/"
+        component={
+          Home
+        }
+      />
+      <Route
+        path="/login"
+        component={
+          Login
+        }
+      />
+      <Route
+        path="/logout"
+        component={
+          Logout
+        }
+      />
+      <Route
+        path="/create"
+        component={
+          Create
+        }
+      />
     </div>
   )
 }

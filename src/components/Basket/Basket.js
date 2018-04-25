@@ -5,13 +5,37 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const Basket = props => {
-  const { basket } = props
+  const {
+    basket,
+  } = props
   return (
     <List>
-      <List.Header>Basket</List.Header>
-      {basket.map((item, i) => <List.Item key={i}>{item}</List.Item>)}
+      <List.Header>
+        Basket
+      </List.Header>
+      {basket.map(
+        (
+          item,
+          i
+        ) => (
+          <List.Item
+            key={
+              i
+            }>
+            {
+              item
+            }
+          </List.Item>
+        )
+      )}
     </List>
   )
 }
 
-export default connect(state => ({ basket: state.basket }), BasketActions)(Basket)
+export default connect(
+  state => ({
+    basket:
+      state.basket,
+  }),
+  BasketActions
+)(Basket)

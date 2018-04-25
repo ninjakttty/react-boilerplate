@@ -20,7 +20,8 @@
     "dev": "react-scripts start",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom"
+    "test": "react-scripts test --env=jsdom",
+    "pretty": "prettier --write 'src/**/*.js'"
   },
   "husky": {
     "hooks": {
