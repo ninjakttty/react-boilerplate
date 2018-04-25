@@ -7,26 +7,17 @@ const initialState = Record({
   token: 'token',
 })
 
-export default function authReducer(
-  state = new initialState(),
-  action
-) {
+export default function authReducer(state = new initialState(), action) {
   switch (action.type) {
     case actions.LOGIN_FULFILLED: {
-      const {
-        token,
-        email,
-      } = action.payload
+      const { token, email } = action.payload
       return state
         .set('email', email)
         .set('token', token)
         .set('loggedIn', true)
     }
     case actions.LOGIN_REJECTED: {
-      console.log(
-        `rejected login`,
-        action.payload
-      )
+      console.log(`rejected login`, action.payload)
       return new initialState()
     }
 

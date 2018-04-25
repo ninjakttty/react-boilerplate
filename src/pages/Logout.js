@@ -13,7 +13,4 @@ const LogoutPage = ({ logout }) => (
   </div>
 )
 
-export default connect(
-  null,
-  AuthActions
-)(LogoutPage)
+export default connect(null, AuthActions)(LogoutPage)

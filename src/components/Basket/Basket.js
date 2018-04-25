@@ -9,16 +9,9 @@ const Basket = props => {
   return (
     <List>
       <List.Header>Basket</List.Header>
-      {basket.map((item, i) => (
-        <List.Item key={i}>
-          {item}
-        </List.Item>
-      ))}
+      {basket.map((item, i) => <List.Item key={i}>{item}</List.Item>)}
     </List>
   )
 }
 
-export default connect(
-  state => ({ basket: state.basket }),
-  BasketActions
-)(Basket)
+export default connect(state => ({ basket: state.basket }), BasketActions)(Basket)
