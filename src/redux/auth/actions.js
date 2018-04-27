@@ -16,11 +16,17 @@ export function login(data) {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({
+      email,
+      password,
+    }),
   })
     .then(data => data.json())
     .then(({ token }) => token)
-    .then(token => ({ token, ...data }))
+    .then(token => ({
+      token,
+      ...data,
+    }))
     .catch(() => {
       return new Promise((resolve, reject) => reject())
     })

@@ -27,7 +27,9 @@ class LoginForm extends Component {
     const { createAccount } = this.props
     createAccount(this.state)
 
-    this.setState({ loading: true })
+    this.setState({
+      loading: true,
+    })
   }
 
   handleChange = (e, { name, value }) => {
@@ -45,13 +47,48 @@ class LoginForm extends Component {
         <Form.Input defaultValue={this.state.email} label="email" name="email" onChange={this.handleChange} />
         <Form.Input defaultValue={this.state.password} label="password" name="password" onChange={this.handleChange} />
         <Form.Input defaultValue={this.state.name} label="name" name="name" onChange={this.handleChange} />
-        <Form.Input defaultValue={this.state.phone_number} label="phone_number" name="phone_number" onChange={this.handleChange} />
-        <Form.Input defaultValue={this.state.bank_name} label="bank_name" name="bank_name" onChange={this.handleChange} />
-        <Form.Input defaultValue={this.state.bank_routing_number} label="bank_routing_number" name="bank_routing_number" onChange={this.handleChange} />
-        <Form.Input defaultValue={this.state.bank_account_number} label="bank_account_number" name="bank_account_number" onChange={this.handleChange} />
-        <Form.Input defaultValue={this.state.phone_extension} label="phone_extension" name="phone_extension" onChange={this.handleChange} />
-        <Form.Input defaultValue={this.state.address_1} label="address_1" name="address_1" onChange={this.handleChange} />
-        <Form.Input defaultValue={this.state.address_2} label="address_2" name="address_2" onChange={this.handleChange} />
+        <Form.Input
+          defaultValue={this.state.phone_number}
+          label="phone_number"
+          name="phone_number"
+          onChange={this.handleChange}
+        />
+        <Form.Input
+          defaultValue={this.state.bank_name}
+          label="bank_name"
+          name="bank_name"
+          onChange={this.handleChange}
+        />
+        <Form.Input
+          defaultValue={this.state.bank_routing_number}
+          label="bank_routing_number"
+          name="bank_routing_number"
+          onChange={this.handleChange}
+        />
+        <Form.Input
+          defaultValue={this.state.bank_account_number}
+          label="bank_account_number"
+          name="bank_account_number"
+          onChange={this.handleChange}
+        />
+        <Form.Input
+          defaultValue={this.state.phone_extension}
+          label="phone_extension"
+          name="phone_extension"
+          onChange={this.handleChange}
+        />
+        <Form.Input
+          defaultValue={this.state.address_1}
+          label="address_1"
+          name="address_1"
+          onChange={this.handleChange}
+        />
+        <Form.Input
+          defaultValue={this.state.address_2}
+          label="address_2"
+          name="address_2"
+          onChange={this.handleChange}
+        />
         <Form.Input defaultValue={this.state.city} label="city" name="city" onChange={this.handleChange} />
         <Form.Input defaultValue={this.state.state} label="state" name="state" onChange={this.handleChange} />
         <Form.Input defaultValue={this.state.country} label="country" name="country" onChange={this.handleChange} />
@@ -63,4 +100,9 @@ class LoginForm extends Component {
   }
 }
 
-export default connect(state => ({ loggedIn: state.auth.loggedIn }), AuthActions)(LoginForm)
+export default connect(
+  state => ({
+    loggedIn: state.auth.loggedIn,
+  }),
+  AuthActions
+)(LoginForm)

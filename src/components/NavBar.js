@@ -4,11 +4,15 @@ import { push } from 'react-router-redux'
 import { connect } from 'react-redux'
 
 class NavBar extends Component {
-  state = { activeItem: 'home' }
+  state = {
+    activeItem: 'home',
+  }
 
   handleItemClick = (e, { name }) => {
     const { push } = this.props
-    this.setState({ activeItem: name })
+    this.setState({
+      activeItem: name,
+    })
     push(name === 'home' ? '/' : `/${name}`)
   }
 
@@ -28,4 +32,10 @@ class NavBar extends Component {
   }
 }
 
-export default connect(state => ({ path: state.router.location.pathname, loggedIn: state.auth.loggedIn }), { push })(NavBar)
+export default connect(
+  state => ({
+    path: state.router.location.pathname,
+    loggedIn: state.auth.loggedIn,
+  }),
+  { push }
+)(NavBar)

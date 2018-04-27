@@ -13,7 +13,9 @@ class LoginForm extends Component {
   handleSubmit = (e, { name }) => {
     const { login } = this.props
     login(this.state)
-    this.setState({ loading: true })
+    this.setState({
+      loading: true,
+    })
   }
 
   handleChange = (e, { name, value }) => {
@@ -25,8 +27,20 @@ class LoginForm extends Component {
   render() {
     const form = (
       <Form onSubmit={this.handleSubmit}>
-        <Form.Input defaultValue="yuri@ninjakitty.net" label="Enter Email" type="text" name="email" onChange={this.handleChange} />
-        <Form.Input defaultValue="thing" label="Enter Password" type="password" name="password" onChange={this.handleChange} />
+        <Form.Input
+          defaultValue="yuri@ninjakitty.net"
+          label="Enter Email"
+          type="text"
+          name="email"
+          onChange={this.handleChange}
+        />
+        <Form.Input
+          defaultValue="thing"
+          label="Enter Password"
+          type="password"
+          name="password"
+          onChange={this.handleChange}
+        />
         <Button type="submit" loading={this.state.loading}>
           Submit
         </Button>
@@ -37,4 +51,9 @@ class LoginForm extends Component {
   }
 }
 
-export default connect(state => ({ loggedIn: state.auth.loggedIn }), AuthActions)(LoginForm)
+export default connect(
+  state => ({
+    loggedIn: state.auth.loggedIn,
+  }),
+  AuthActions
+)(LoginForm)

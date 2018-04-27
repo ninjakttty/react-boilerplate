@@ -19,4 +19,9 @@ const ProductList = props => {
   )
 }
 
-export default connect(state => ({ options: state.basket }), BasketActions)(ProductList)
+export default connect(
+  state => ({
+    options: state.basket,
+  }),
+  BasketActions
+)(ProductList)

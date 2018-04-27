@@ -2,29 +2,38 @@
   "name": "@ninjakttty/react-boilerplate",
   "version": "0.0.1",
   "description": "react/redux/boilerplate",
+  "license": "MIT",
   "engines": {
     "node": "8.x.x"
   },
-  "proxy": "http://localhost:3000/",
-  "devDependencies": {
-    "babel-eslint": "^8.2.3",
-    "eslint": "^4.9.0",
-    "eslint-config-airbnb": "^16.0.0",
-    "eslint-config-prettier": "^2.6.0",
-    "eslint-config-react-app": "^2.0.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-flowtype": "^2.39.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-react": "^7.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "prettier": "^1.7.4",
-    "prettier-eslint": "^8.2.1",
-    "prettier-eslint-cli": "^4.4.0",
-    "react-scripts": "^1.0.14"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninjakttty/react-boilerplate.git"
   },
+  "bugs": {
+    "url": "https://github.com/ninjakttty/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ninjakttty/react-boilerplate#readme",
+  "author": "Yuri A. Parsons <yuri@ninjakitty.net> (http://ninjakitty.net/)",
+  "scripts": {
+    "build": "react-scripts build",
+    "dev": "react-scripts start",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "jest",
+    "test:all": "react-scripts test --env=jsdom",
+    "pretty": "prettier --write 'src/**/*.js'"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": ["prettier", "git add"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
+  },
+  "keywords": [],
+  "proxy": "http://localhost:3000/",
   "dependencies": {
     "axios": "~0.18.0",
     "history": "^4.7.2",
@@ -44,22 +53,25 @@
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.79.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ninjakttty/react-boilerplate.git"
-  },
-  "keywords": [],
-  "author": "Yuri A. Parsons <yuri@ninjakitty.net> (http://ninjakitty.net/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ninjakttty/react-boilerplate/issues"
-  },
-  "homepage": "https://github.com/ninjakttty/react-boilerplate#readme"
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^1.0.0-rc.2",
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.12.1",
+    "prettier-eslint": "^8.8.1",
+    "prettier-eslint-cli": "^4.7.1",
+    "react-scripts": "^1.0.14"
+  }
 }
