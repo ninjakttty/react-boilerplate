@@ -25,7 +25,10 @@
     "pretty": "prettier --write 'src/**/*.js'"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": ["prettier", "git add"]
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
@@ -37,6 +40,7 @@
   "dependencies": {
     "axios": "~0.18.0",
     "history": "^4.7.2",
+    "immer": "^1.3.0",
     "immutable": "^3.8.2",
     "is-json": "^2.0.1",
     "random-int": "^1.0.0",
