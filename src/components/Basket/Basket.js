@@ -14,9 +14,4 @@ const Basket = props => {
   )
 }
 
-export default connect(
-  state => ({
-    basket: state.basket,
-  }),
-  BasketActions
-)(Basket)
+export default connect(state => ({ basket: state.basket }), BasketActions)(Basket)
