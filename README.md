@@ -1,12 +1,17 @@
 # Yuri's React/Redux/Immutable/Webpack Boilerplate
+
 [![Build Status](https://travis-ci.org/ninjakttty/react-boilerplate.svg?branch=master)](https://travis-ci.org/ninjakttty/react-boilerplate)
 [![Greenkeeper badge](https://badges.greenkeeper.io/ninjakttty/react-boilerplate.svg)](https://greenkeeper.io/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
 ## Installation
 
 ```
-git clone git@github.com:ninjakttty/react-boilerplate.git
+git clone --depth 1 git@github.com:ninjakttty/react-boilerplate.git <project name>
+cd <project name>
+rm -rf .git
+git init
 npm install
 ```
 
