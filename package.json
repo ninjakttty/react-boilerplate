@@ -25,7 +25,10 @@
     "pretty": "prettier --write 'src/**/*.js'"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": ["prettier", "git add"]
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
@@ -40,8 +43,8 @@
     "immutable": "^3.8.2",
     "is-json": "^2.0.1",
     "random-int": "^1.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
