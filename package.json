@@ -45,7 +45,7 @@
     "random-int": "^1.0.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-redux": "^5.0.6",
+    "react-redux": "^6.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "next",
@@ -61,7 +61,7 @@
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-config-react-app": "^2.0.1",
+    "eslint-config-react-app": "^3.0.2",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-flowtype": "^3.0.0",
     "eslint-plugin-import": "^2.7.0",
@@ -75,6 +75,6 @@
     "prettier": "^1.12.1",
     "prettier-eslint": "^8.8.1",
     "prettier-eslint-cli": "^4.7.1",
-    "react-scripts": "^1.0.14"
+    "react-scripts": "^2.1.2"
   }
 }
