@@ -57,7 +57,7 @@
     "semantic-ui-react": "^0.81.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^10.0.3",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
