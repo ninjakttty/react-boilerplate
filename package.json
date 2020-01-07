@@ -38,7 +38,7 @@
   "keywords": [],
   "proxy": "http://localhost:3000/",
   "dependencies": {
-    "axios": "~0.18.0",
+    "axios": "~0.19.1",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
     "is-json": "^2.0.1",
