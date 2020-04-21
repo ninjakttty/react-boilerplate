@@ -60,7 +60,7 @@
     "babel-eslint": "^8.2.3",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^17.0.0",
-    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-config-react-app": "^3.0.2",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-flowtype": "^3.0.0",
